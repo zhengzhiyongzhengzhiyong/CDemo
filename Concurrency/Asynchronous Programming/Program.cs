@@ -10,8 +10,17 @@ namespace Asynchronous_Programming
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test");
+            for (int i = 0; i < 1000; i++)
+            {
+                log(i.ToString());
+            }
             Console.ReadLine();
+        }
+
+        public static async void log(string log)
+        {
+            Console.WriteLine(log);
+            await Task.Delay(100000);
         }
     }
 }
