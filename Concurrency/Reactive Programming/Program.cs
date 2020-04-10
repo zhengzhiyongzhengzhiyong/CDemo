@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace Reactive_Programming
 {
@@ -12,7 +14,15 @@ namespace Reactive_Programming
     {
         static void Main(string[] args)
         {
-            Rx();
+            // Rx();
+
+            //var timer = new System.Timers.Timer(interval: 1000) { Enabled = true };
+            //var ticks = Observable.FromEventPattern(timer, "Elapsed");
+            //ticks.Subscribe(data => Console.WriteLine("OnCompleted:" + ((ElapsedEventArgs)data.EventArgs).SignalTime));
+
+            var client = new WebClient();
+            var downloadedString = Observable.FromEventPattern();
+
             Console.ReadLine();
         }
 
