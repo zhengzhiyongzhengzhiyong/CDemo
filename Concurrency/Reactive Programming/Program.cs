@@ -25,5 +25,6 @@ namespace Reactive_Programming
                 .Select(x => x.Timestamp);
             timestamps.Subscribe(x => Console.WriteLine(x));
         }
+
     }
 }
